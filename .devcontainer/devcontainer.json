@@ -1,0 +1,26 @@
+{
+  "name": "MediaFlow Proxy",
+  
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  },
+  
+  "forwardPorts": [8888],
+  
+  "remoteEnv": {
+    "API_PASSWORD": "your_password",
+    "FORWARDED_ALLOW_IPS": "*"
+  },
+  
+  "remoteUser": "root"
+}
